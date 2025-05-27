@@ -10,7 +10,7 @@ const Main = () => {
           <p id="location">Chicago</p>
           </div>
           <p id="briefing">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <a href="/order-online" id="booking-button" role="button">Reserve a table</a>
+          <a href="/booking" id="booking-button" role="button">Reserve a table</a>
         </div>
         <img src="./restauranfood.jpg" alt="Restaurant food" />
       </section>

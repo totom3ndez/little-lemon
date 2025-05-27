@@ -1,16 +1,22 @@
-import './App.css'
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Layout from './layout/Layout'
+import Main from './pages/Main';
+import BookingPage from './pages/BookingPage';
+import Menu from './pages/Menu';
 
-function App() {
+const App = () => {
   return (
-    <>
-    <Header />
-    <Main />
-    <Footer />
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Main />} />
+          <Route path="booking" element={<BookingPage />} />
+          <Route path="menu" element={<Menu />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
