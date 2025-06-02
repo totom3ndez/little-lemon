@@ -2,7 +2,7 @@
 const Hero = () => {
   return (
     <section id='hero'>
-        <div id="hero-background"></div>
+        <div id="hero-container">
         <div id="hero-text">
           <div id="title">
           <h1>Little Lemon</h1>
@@ -12,6 +12,7 @@ const Hero = () => {
           <a href="/booking" id="booking-button" role="button">Reserve a table</a>
         </div>
         <img src="./restauranfood.jpg" alt="Restaurant food" />
+        </div>
       </section>
   )
 }

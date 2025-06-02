@@ -1,10 +1,11 @@
 import Navbar from "./Navbar"
 
-const Header = () => {
+const Header = (props) => {
+
   return (
     <nav>
     <img src='./Logo.svg' alt="Little Lemon logo" />
-    <Navbar />
+    <Navbar isMobile={props.isMobile} />
     </nav>
   )
 }
