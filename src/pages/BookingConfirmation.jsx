@@ -1,6 +1,5 @@
 
-
-const Menu = () => {
+const BookingConfirmation = () => {
   return (
     <section className="menu">
       <h2>Page under construction</h2>
@@ -8,4 +7,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default BookingConfirmation

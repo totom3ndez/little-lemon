@@ -121,6 +121,22 @@ nav {
   font-weight: 100;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.navbar a{
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.navbar a:hover {
+  background-color: var(--secondary-color);
+}
+
 #booking-button, #Menu-button {
   padding: 15px 30px;
   background-color: var(--secondary-color);
@@ -132,11 +148,10 @@ nav {
   color: black;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-
-#booking-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+#booking-button:hover, #Menu-button:hover {
+  background-color: #EE9972;
 }
 
 .specials {
