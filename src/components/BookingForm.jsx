@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const BookingForm = ({ availableTimes, updateTimes}) => {
+const BookingForm = ({ availableTimes, updateTimes, submitForm}) => {
   const [filledContact, setFilledContact] = useState(false);
   const required = <sup style={{color: '#ea3c30', fontWeight: 'bold'}}>*</sup>
   const [formData, setFormData] = useState( {
@@ -29,8 +29,7 @@ const BookingForm = ({ availableTimes, updateTimes}) => {
       alert("Please fill in all required fields.");
       return;
     }
-    console.log("Reservation Details:", formData);
-    alert("Your reservation has been made successfully!");
+    submitForm(formData);
     clearForm();
     setFilledContact(false);
   };

@@ -1,6 +1,7 @@
 import { useReducer } from 'react';
 import BookingForm from '../components/BookingForm'
-import { fetchAPI } from '../data/api'
+import { fetchAPI, submitAPI } from '../data/api'
+import { useNavigate } from 'react-router-dom';
 
 const BookingPage = () => {
 
@@ -27,13 +28,22 @@ const BookingPage = () => {
     dispatch({ type: 'INITIALIZE' });
   }
 
+  const navigate = useNavigate();
+
+  function submitForm(formData) {
+    if (submitAPI(formData)) {
+      navigate('/confirmed-booking');
+      initializeTimes();
+    }
+  };
+
   return (
     <section id="booking-page">
       <div className="hero-text">
       <h1>Reserve a table</h1>
       <p>Book your table online for a delightful dining experience.</p>
       </div>
-    <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} initializeTimes={initializeTimes}/>
+    <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} initializeTimes={initializeTimes} submitForm={submitForm}/>
     </section>
   )
 }
