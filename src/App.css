@@ -376,6 +376,43 @@ input, select {
   margin-top: 100px;
 }
 
+.footer{
+  background-color: #d9d9d9;
+  display: flex;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  width: 860px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 .about-content {
   width: 370px;
+}
+
+.footer-img {
+  width: 160px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
 }

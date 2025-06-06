@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id='about'>
       <div className="about-content">
       <h2>Little Lemon</h2>
       <p>We are a family-owned restaurant dedicated to serving the best food in town. Our chefs use only the freshest ingredients to create delicious meals that will keep you coming back for more.</p>
