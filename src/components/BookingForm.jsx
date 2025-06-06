@@ -1,5 +1,4 @@
 import { useState } from "react";
-import {submitAPI} from "../data/api"; // Assuming you have a function to submit the form data
 
 const BookingForm = ({ availableTimes, updateTimes}) => {
   const [filledContact, setFilledContact] = useState(false);
@@ -31,7 +30,6 @@ const BookingForm = ({ availableTimes, updateTimes}) => {
       return;
     }
     console.log("Reservation Details:", formData);
-    submitAPI(formData)
     alert("Your reservation has been made successfully!");
     clearForm();
     setFilledContact(false);
