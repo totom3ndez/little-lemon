@@ -1,14 +1,15 @@
 import { useReducer } from 'react';
 import BookingForm from '../components/BookingForm'
+import { fetchAPI } from '../data/api'
 
 const BookingPage = () => {
 
  
-  const initialState = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+  const initialState = fetchAPI(new Date());
   function timesReducer(state, action) {
     switch (action.type) {
       case 'UPDATE_TIMES':
-        return state.filter(time => time !== action.payload);
+        return action.payload;
       case 'INITIALIZE':
         return initialState;
       default:
@@ -19,8 +20,8 @@ const BookingPage = () => {
 
   const [availableTimes, dispatch] = useReducer(timesReducer, initialState);
 
-  function updateTimes(selectedTime) {
-    dispatch({ type: 'UPDATE_TIMES', payload: selectedTime });
+  function updateTimes(selectedDate) {
+    dispatch({ type: 'UPDATE_TIMES', payload: fetchAPI(selectedDate) });
   }
   function initializeTimes() {
     dispatch({ type: 'INITIALIZE' });
